@@ -20,7 +20,6 @@ public class ShipRepository {
 
     private final ApiService apiService;
     private final TaqplayProperties taqplayProperties;
-    private final ObjectMapper objectMapper;
 
     public List<Ship> getList(Authentication authentication, String mssi) {
         try {
