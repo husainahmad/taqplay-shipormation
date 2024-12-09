@@ -1,6 +1,6 @@
-package com.interview.taqplay.shipormation.controller;
+package com.interview.taqplay.shipormation.http.controller;
 
-import com.interview.taqplay.shipormation.controller.dto.ApiResponse;
+import com.interview.taqplay.shipormation.http.controller.dto.ApiResponse;
 import com.interview.taqplay.shipormation.core.service.ShipService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

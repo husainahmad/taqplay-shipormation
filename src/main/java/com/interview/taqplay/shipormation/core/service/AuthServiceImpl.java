@@ -1,5 +1,6 @@
 package com.interview.taqplay.shipormation.core.service;
 
+import com.interview.taqplay.shipormation.core.exception.UnAuthorizedRequestException;
 import com.interview.taqplay.shipormation.core.model.Authentication;
 import com.interview.taqplay.shipormation.core.repository.AuthRepository;
 import lombok.AllArgsConstructor;
@@ -17,6 +18,10 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public Authentication authenticate() throws IOException {
-        return authRepository.authenticate();
+        Authentication authentication = authRepository.authenticate();
+        if (authentication==null) {
+            throw new UnAuthorizedRequestException("Authorization Failed ", null);
+        }
+        return authentication;
     }
 }

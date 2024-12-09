@@ -1,4 +1,4 @@
-package com.interview.taqplay.shipormation.controller.dto;
+package com.interview.taqplay.shipormation.http.controller.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
@@ -7,11 +7,11 @@ import org.springframework.http.HttpStatus;
 
 @Getter
 @Builder
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApiResponse {
     @Builder.Default
     private int httpStatus = HttpStatus.CREATED.value();
     @Builder.Default
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Object data = HttpStatus.CREATED;
+    private Object error;
 }

@@ -13,9 +13,10 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.interview.taqplay.shipormation.util.LocationUtil.isLocationInPolygon;
 
 @Slf4j
 @AllArgsConstructor
@@ -74,18 +75,6 @@ public class ShipServiceImpl implements ShipService {
         } catch (Exception e) {
             throw  new NotFoundRequestException("Not able to authenticate", null);
         }
-    }
-
-    private boolean isLocationInPolygon(double lat, double lon, double[][] polygonPoints) {
-        Polygon polygon = new Polygon();
-        for (double[] point: polygonPoints) {
-            polygon.addPoint((int) (point[0] * 1_000_000), (int) (point[1] * 1_000_000));
-        }
-
-        int scaledX = (int) (lat * 1_000_000);
-        int scaledY = (int) (lon * 1_000_000);
-
-        return polygon.contains(scaledX, scaledY);
     }
 
     private double[][] getRoterdamLocation() {
