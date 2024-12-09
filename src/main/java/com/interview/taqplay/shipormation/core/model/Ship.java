@@ -18,6 +18,15 @@ public class Ship {
     private String imoNumber;
     @JsonProperty("name")
     private String name;
+    @JsonProperty("shipType")
+    private ShipType shipType;
+    @JsonProperty("status")
+    private Status status;
+    @JsonProperty("speedOverGround")
+    private Double speedOverGround;
+    @JsonProperty("destination")
+    private String destination;
+    @JsonProperty("trueDestination")
+    private String trueDestination;
     private ShipEvent event;
-
 }
