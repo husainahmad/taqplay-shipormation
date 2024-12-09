@@ -1,7 +1,7 @@
 package com.interview.taqplay.shipormation.core.repository;
 
 import com.interview.taqplay.shipormation.config.TaqplayProperties;
-import com.interview.taqplay.shipormation.core.UserDto;
+import com.interview.taqplay.shipormation.core.model.dao.UserDto;
 import com.interview.taqplay.shipormation.core.external.service.ApiService;
 import com.interview.taqplay.shipormation.core.model.Authentication;
 import lombok.AllArgsConstructor;

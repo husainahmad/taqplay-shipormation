@@ -1,4 +1,4 @@
-package com.interview.taqplay.shipormation.core;
+package com.interview.taqplay.shipormation.core.model.dao;
 
 import lombok.Data;
 
