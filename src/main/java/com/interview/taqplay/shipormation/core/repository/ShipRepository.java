@@ -1,7 +1,6 @@
 package com.interview.taqplay.shipormation.core.repository;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.interview.taqplay.shipormation.config.TaqplayProperties;
 import com.interview.taqplay.shipormation.core.external.service.ApiService;
 import com.interview.taqplay.shipormation.core.model.Authentication;
