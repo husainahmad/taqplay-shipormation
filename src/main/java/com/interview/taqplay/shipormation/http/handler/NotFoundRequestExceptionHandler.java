@@ -1,7 +1,7 @@
-package com.interview.taqplay.shipormation.http.controller.handler;
+package com.interview.taqplay.shipormation.http.handler;
 
 import com.interview.taqplay.shipormation.core.exception.NotFoundRequestException;
-import com.interview.taqplay.shipormation.http.controller.dto.ApiResponse;
+import com.interview.taqplay.shipormation.http.dto.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;

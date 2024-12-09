@@ -1,6 +1,6 @@
-package com.interview.taqplay.shipormation.http.controller.handler;
+package com.interview.taqplay.shipormation.http.handler;
 
-import com.interview.taqplay.shipormation.http.controller.dto.ApiResponse;
+import com.interview.taqplay.shipormation.http.dto.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

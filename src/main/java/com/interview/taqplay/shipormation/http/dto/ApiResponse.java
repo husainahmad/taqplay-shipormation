@@ -1,4 +1,4 @@
-package com.interview.taqplay.shipormation.http.controller.dto;
+package com.interview.taqplay.shipormation.http.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
