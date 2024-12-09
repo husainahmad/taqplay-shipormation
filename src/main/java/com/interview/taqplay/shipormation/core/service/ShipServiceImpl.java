@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.interview.taqplay.shipormation.config.TaqplayProperties;
-import com.interview.taqplay.shipormation.core.exception.NotFoundRequestException;
 import com.interview.taqplay.shipormation.core.model.Authentication;
 import com.interview.taqplay.shipormation.core.model.Ship;
 import com.interview.taqplay.shipormation.core.model.ShipEvent;
@@ -70,11 +69,7 @@ public class ShipServiceImpl implements ShipService {
     }
 
     private Authentication authenticate() {
-        try {
-            return authService.authenticate();
-        } catch (Exception e) {
-            throw  new NotFoundRequestException("Not able to authenticate", null);
-        }
+        return authService.authenticate();
     }
 
     private double[][] getRoterdamLocation() {

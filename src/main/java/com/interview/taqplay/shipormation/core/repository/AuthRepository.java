@@ -18,12 +18,17 @@ public class AuthRepository {
     private final ApiService apiService;
     private final TaqplayProperties taqplayProperties;
 
-    public Authentication authenticate() throws IOException {
-        UserDto userDto = new UserDto();
-        userDto.setUsername(taqplayProperties.getAuth().getUsername());
-        userDto.setPassword(taqplayProperties.getAuth().getPassword());
-        return apiService.postDataAsObject(taqplayProperties.getAuth().getUrl(), null,
-                userDto, Authentication.class);
+    public Authentication authenticate() {
+        try {
+            UserDto userDto = new UserDto();
+            userDto.setUsername(taqplayProperties.getAuth().getUsername());
+            userDto.setPassword(taqplayProperties.getAuth().getPassword());
+            return apiService.postDataAsObject(taqplayProperties.getAuth().getUrl(), null,
+                    userDto, Authentication.class);
+        } catch (IOException e) {
+            log.error(e.getMessage());
+            return null;
+        }
     }
 
 }

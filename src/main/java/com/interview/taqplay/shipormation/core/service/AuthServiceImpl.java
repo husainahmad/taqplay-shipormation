@@ -7,8 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-
 @Slf4j
 @AllArgsConstructor
 @Service("authService")
@@ -17,7 +15,7 @@ public class AuthServiceImpl implements AuthService {
     private final AuthRepository authRepository;
 
     @Override
-    public Authentication authenticate() throws IOException {
+    public Authentication authenticate() {
         Authentication authentication = authRepository.authenticate();
         if (authentication==null) {
             throw new UnAuthorizedRequestException("Authorization Failed ", null);
