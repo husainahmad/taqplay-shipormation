@@ -91,7 +91,7 @@ public class ShipServiceImpl implements ShipService {
     private double[][] getRoterdamLocation() {
         try {
             return objectMapper.readValue(
-                    taqplayProperties.getShip().getRoterdam(), new TypeReference<double[][]>() {
+                    taqplayProperties.getShip().getRoterdam(), new TypeReference<>() {
                     });
         } catch (JsonProcessingException e) {
             log.error(e.getMessage());

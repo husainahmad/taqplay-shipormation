@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class HttpClientConfiguration {
+
     @Bean
     public CloseableHttpClient httpClient() {
         return HttpClients.createDefault();
